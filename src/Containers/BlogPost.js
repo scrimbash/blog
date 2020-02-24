@@ -24,6 +24,8 @@ import {
   AuthorName,
 } from '../Components/Post/Author'
 
+import {UtterancesComments} from './UtterancesComments'
+
 export default function BlogHome() {
   const issueNumber = parseInt(window.location.href.split("/").pop());
   const GET_POSTS = gql`
@@ -196,6 +198,9 @@ export default function BlogHome() {
             </PostReaction>
           )}
           <GithubCounter counters={reactionCounter} onSelect={emoji => githubCounterEmojiSelect(emoji)} onAdd={() => githubCounterAddReaction()} />
+            
+          <UtterancesComments />
+        
         </PostContainer>
       )}
     </>

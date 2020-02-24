@@ -7,6 +7,7 @@ export const config = {
 
   // Your Github Repo Name Where You Have your issues as Blog
   githubRepo: "blog",
+  commentLabel: "blog-comment",
 
   // Your Personal Blog Title
   title : "Test Blog" ,
