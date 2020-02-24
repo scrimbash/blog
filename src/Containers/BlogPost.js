@@ -7,6 +7,7 @@ import { docco } from "react-syntax-highlighter/dist/esm/styles/hljs";
 import { GithubCounter } from "react-reactions";
 import { gql } from "apollo-boost";
 import { useQuery } from '@apollo/react-hooks';
+import { Helmet } from 'react-helmet'
 
 import { config } from "../config";
 import { ReactionCard } from "../Components/Post/ReactionCard";
@@ -162,6 +163,8 @@ export default function BlogHome() {
   return (
     <>
       {post.title && (
+        <>
+        <Helmet><title>{post.title}</title></Helmet>
         <PostContainer>
           <PostTitle>{post.title}</PostTitle>
           <div>
@@ -202,6 +205,7 @@ export default function BlogHome() {
           <UtterancesComments />
         
         </PostContainer>
+        </>
       )}
     </>
   );
