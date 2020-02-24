@@ -160,6 +160,8 @@ export default function BlogHome() {
     return <Loader />
   }
 
+  console.log('Post Title', post.title)
+
   return (
     <>
       {post.title && (

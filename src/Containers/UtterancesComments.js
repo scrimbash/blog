@@ -7,13 +7,13 @@ export const UtterancesComments = () => (
           return;
         }
         const scriptElem = document.createElement("script");
+        scriptElem.setAttribute("repo", "scrimbash/blog");
+        scriptElem.setAttribute("issue-term", "title");
+        scriptElem.setAttribute("label", "blog");
+        scriptElem.setAttribute("theme", "github-light");
         scriptElem.src = "https://utteranc.es/client.js";
         scriptElem.async = true;
         scriptElem.crossOrigin = "anonymous";
-        scriptElem.setAttribute("repo", "scrimbash/blog");
-        scriptElem.setAttribute("issue-term", "title");
-        scriptElem.setAttribute("label", "blog-comment");
-        scriptElem.setAttribute("theme", "github-light");
         elem.appendChild(scriptElem);
       }}
     />
